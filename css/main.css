@@ -276,6 +276,17 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+.closing-section {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.closing-salam {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
 .footer-outside {
     width: 100%;
     padding: 20px 0;
