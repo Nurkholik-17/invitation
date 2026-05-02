@@ -1,0 +1,310 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    color: #444;
+}
+
+.main-container {
+    background-color: #f5ece1;
+    max-width: 450px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+/* Glitter Effect Global */
+.main-container::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-image: radial-gradient(1px 1px at 20px 30px, #b48a00, transparent),
+                      radial-gradient(1.5px 1.5px at 50px 80px, #ffffff, transparent);
+    background-size: 100px 100px;
+    animation: glitter 4s infinite;
+    pointer-events: none;
+    z-index: 10;
+
+}
+
+@keyframes glitter {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 0.9; }
+}
+
+section { 
+    padding: 20px 20px; 
+    text-align: center; 
+}
+
+/* Slideshow */
+.slider-bg-container {
+    position: relative;
+    width: 100%;
+    padding: 50px 50px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+.bg-grid-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.6; /* Agar slider lebih menonjol */
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.slider img {
+    width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    height: 300px;
+    object-fit: cover;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+:root {
+    --swiper-navigation-color: #d4af37;
+    --swiper-pagination-color: #d4af37;
+}
+
+.opening-text { 
+    background: #1a2a4a; 
+    color: white; 
+    border-bottom: 5px solid #d4af37;
+    border-radius:15px; 
+    width: 90%; 
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.bismillah { 
+    font-size: 1.5rem; 
+    margin-bottom: 15px;
+}
+
+.child-name-main { 
+    font-family: 'Great Vibes', cursive; 
+    font-size: 2.5rem; 
+    color: #1a2a4a; 
+    margin: 5px 0;
+    line-height: 1.2; 
+}
+
+.parents-info { 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+}
+
+.profile-section h4 {
+    margin: 0; 
+    padding: 0;
+    line-height: 1;
+}
+.profile-frame {
+    width: 200px; 
+    height: 200px; 
+    margin: 0 auto;
+    margin-top: 1px;
+    border-radius: 50%; 
+    border: 5px solid #d4af37;
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.profile-frame img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.khitan-quote { 
+    font-style: italic; 
+    font-size: 0.9rem; 
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #666; 
+}
+
+#timer { 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin: 5px 0; 
+}
+
+.time-box { 
+    background: #1a2a4a; 
+    color: #d4af37; 
+    padding: 10px; 
+    border-radius: 8px; 
+    width: 70px; 
+    margin-bottom: 0px;
+}
+
+.time-box span { 
+    display: block; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+}
+
+.gold-title { 
+    font-family: 'Playfair Display', serif; 
+    color: #1a2a4a; 
+    border-bottom: 2px solid #d4af37; 
+    display: inline-block; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-location {
+    display: block; 
+    width: 240px;
+    background: #d4af37; 
+    color: #1a2a4a; 
+    text-decoration: none; 
+    padding: 15px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    margin: 5px auto 0px auto;
+    teks-align: center;
+}
+
+.gift-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Membagi kiri dan kanan */
+    gap: 15px;
+}
+
+.gift-card {
+    background: #1a2a4a; 
+    color: white; 
+    padding: 25px; 
+    border-radius: 15px; 
+    border: 2px solid #d4af37;
+    max-width: 500px;
+}
+
+.bank-info {
+    text-align: left;
+    padding: 10px;
+}
+
+.bank-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bank-icon {
+    width: 60px;
+    height: auto;
+}
+
+.bank-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.or { 
+    margin: 10px 0; 
+    font-weight: bold; 
+    color: #d4af37; 
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.scan { 
+    margin: 10px 0; 
+    font-weight: bold; 
+    color: #d4af37; 
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.qris-area img { 
+    width: 130px;
+    height: 130px; 
+    border: 3px solid white; 
+    border-radius: 10px; 
+    background: white;
+}
+@media (max-width: 480px) {
+    .gift-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .bank-item {
+        justify-content: center;
+    }
+}
+
+.gallery-grid img { 
+    width: 100%; 
+    border-radius: 10px; 
+    margin-bottom: 15px; 
+    border: 3px solid #fff; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.footer-outside {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 40px; /* Jarak dari konten atas */
+    border-top: 1px solid rgba(212, 175, 55, 0.3); /* Garis emas transparan */
+    background: transparent;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #888;
+}
+
+.footer-container p {
+    font-size: 0.85rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.footer-container strong {
+    color: #d4af37;
+}
+
+.footer-socials {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #555;
+}
