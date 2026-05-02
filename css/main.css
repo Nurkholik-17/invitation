@@ -278,15 +278,16 @@ section {
 
 .closing-section {
     text-align: center;
-    padding: 20px;
-    margin-top: 50px;
-    position: relative;
-    z-index: 999;
+    padding: 60px 20px; /* Menambah ruang atas dan bawah */
+    margin-top: 40px;
+    line-height: 1.8; /* Menambah jarak antar baris kalimat */
 }
-
 .closing-salam {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important; /* Gunakan angka 700 daripada kata 'bold' */
+    font-size: 1.1rem; /* Sedikit diperbesar agar terlihat bedanya */
+    display: block;
+    margin-top: 15px;
 }
 
 .footer-outside {
