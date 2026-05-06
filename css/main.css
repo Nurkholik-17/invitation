@@ -402,23 +402,27 @@ section {
 }
 .bottom-nav {
     position: fixed;
-    top: 20px;
+    top: 10px; 
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
-    max-width: 400px;
+    width: 90%; 
+    max-width: 400px; 
+    min-width: fit-content; 
+    
     background: rgba(26, 42, 74, 0.9); 
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-around;
-    padding: 5px;
+    align-items: center; 
+    padding: 8px 15px; 
     border-radius: 20px;
     border: 1px solid #d4af37;
     z-index: 9999; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
-
 .nav-item {
+    flex:1;
+    min-width: 60px;
     text-decoration: none;
     color: white;
     text-align: center;
