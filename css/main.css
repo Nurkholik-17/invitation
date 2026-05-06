@@ -1,4 +1,8 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
 body {
     background-color: #f0f0f0;
@@ -8,13 +12,20 @@ body {
 
 .main-container {
     background-color: #f5ece1;
+    background-image: 
+        linear-gradient(45deg, rgba(180, 138, 0, 0.05) 25%, transparent 25%), 
+        linear-gradient(-45deg, rgba(180, 138, 0, 0.05) 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, rgba(180, 138, 0, 0.05) 75%), 
+        linear-gradient(-45deg, transparent 75%, rgba(180, 138, 0, 0.05) 75%);
+    background-size: 20px 20px;
+    
     max-width: 450px;
     margin: 0 auto;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
 }
-/* Glitter Effect Global */
+
 .main-container::before {
     content: "";
     position: absolute;
@@ -28,7 +39,6 @@ body {
     animation: glitter 4s infinite;
     pointer-events: none;
     z-index: 10;
-
 }
 
 @keyframes glitter {
@@ -41,7 +51,6 @@ section {
     text-align: center; 
 }
 
-/* Slideshow */
 .slider-bg-container {
     position: relative;
     width: 100%;
@@ -58,7 +67,7 @@ section {
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    opacity: 0.6; /* Agar slider lebih menonjol */
+    opacity: 0.6; 
 }
 
 .slider {
@@ -185,6 +194,76 @@ section {
     margin-bottom: 5px;
 }
 
+.maps-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #d4af37;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.map-box {
+    flex: 0 0 100px; 
+    height: 100px;   
+    border-radius: 10px;
+    overflow: hidden; 
+    border: 1px solid #eee;
+}
+
+.map-box iframe {
+    width: 250%;  
+    height: 250%; 
+    transform: scale(0.4); 
+    transform-origin: 0 0; 
+    border: none;
+}
+
+
+.info-box {
+    flex: 2;
+    text-align: left;
+}
+
+.address-text {
+    font-size: 0.8rem;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+
+.btn-location-small {
+    display: inline-block;
+    background: #1a2a4a;
+    color: #d4af37;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #d4af37;
+    transition: 0.3s;
+}
+
+.btn-location-small:hover {
+    background: #d4af37;
+    color: #1a2a4a;
+}
+
+
+@media (max-width: 360px) {
+    .maps-flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .info-box { text-align: center; }
+}
+
 .btn-location {
     display: block; 
     width: 240px;
@@ -200,7 +279,7 @@ section {
 .gift-content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Membagi kiri dan kanan */
+    justify-content: space-between; 
     gap: 15px;
 }
 
@@ -278,14 +357,14 @@ section {
 
 .closing-section {
     text-align: center;
-    padding: 10px 10px; /* Menambah ruang atas dan bawah */
+    padding: 10px 10px; 
     margin-top: 1px;
-    line-height: 1.8; /* Menambah jarak antar baris kalimat */
+    line-height: 1.8; 
 }
 .closing-salam {
     font-family: 'Montserrat', sans-serif !important;
-    font-weight: 700 !important; /* Gunakan angka 700 daripada kata 'bold' */
-    font-size: 1.1rem; /* Sedikit diperbesar agar terlihat bedanya */
+    font-weight: 700 !important;
+    font-size: 1.1rem; 
     display: block;
     margin: auto
 }
@@ -293,8 +372,8 @@ section {
 .footer-outside {
     width: 100%;
     padding: 20px 0;
-    margin-top: 40px; /* Jarak dari konten atas */
-    border-top: 1px solid rgba(212, 175, 55, 0.3); /* Garis emas transparan */
+    margin-top: 40px; 
+    border-top: 1px solid rgba(212, 175, 55, 0.3); 
     background: transparent;
 }
 
@@ -320,4 +399,44 @@ section {
     font-size: 0.75rem;
     text-transform: uppercase;
     color: #555;
+}
+.bottom-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    max-width: 400px;
+    background: rgba(26, 42, 74, 0.9); 
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #d4af37;
+    z-index: 9999; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 0.7rem;
+    transition: 0.3s;
+}
+
+.nav-item span {
+    font-size: 1.2rem;
+    display: block;
+}
+
+.nav-item p {
+    margin: 0;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.nav-item:hover {
+    transform: translateY(-5px);
 }

@@ -13,9 +13,29 @@
             <audio id="bgMusic" loop>
                 <source src="music/lagu_undangan.mp3" type="audio/mpeg">
             </audio>
-
+    <nav class="bottom-nav">
+    <a href=".slideshow-section" class="nav-item">
+        <span>🏠</span>
+        <p>Home</p>
+    </a>
+    <a href=".profile-section" class="nav-item">
+        <span>👦</span>
+        <p>Profil</p>
+    </a>
+    <a href=".maps-section" class="nav-item">
+        <span>📍</span>
+        <p>Lokasi</p>
+    </a>
+    <a href=".gift-section" class="nav-item">
+        <span>🎁</span>
+        <p>Hadiah</p>
+    </a>
+    <a href=".gallery-grid" class="nav-item">
+        <span>📸</span>
+        <p>Galeri</p>
+    </a>
+    </nav>
     <div class="main-container">
-        <!-- Section 1: Slideshow -->
         <section class="slideshow-section">
             <div class="slider-bg-container">
                 <img src="asetclient/gallery1.jpg" class="bg-grid-image">
@@ -34,14 +54,12 @@
             </div>
         </section>
 
-        <!-- Section 2: Opening -->
         <section class="opening-text" data-aos="fade-up">
             <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
             <p>Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
             <p>Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri Khitanan putra kami:</p>
         </section>
 
-        <!-- Section 3: Profile & Countdown -->
         <section class="profile-section" data-aos="zoom-in">
             <h1 class="child-name-main">Muhammad Nurkholik Kurrohman</h1>
             <p class="parents-info">Putra ke-lima dari Bpk. Surya & Ibu Ashe</p>
@@ -65,25 +83,22 @@
             </section>
         </section>
 
-        <!-- Section 4: Maps -->
         <section class="maps-section" data-aos="fade-up">
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1909.0062539642079!2d106.60557246818027!3d-6.213976935713849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69febd381b694b%3A0x9580566795dbdbcf!2sJl.%20Bawang%20VI%20No.141%2C%20RT.002%2FRW.023%2C%20Cibodasari%2C%20Kec.%20Cibodas%2C%20Kota%20Tangerang%2C%20Banten%2015138!5e0!3m2!1sen!2sid!4v1777206151798!5m2!1sen!2sid" width="400" height="300" style="border: 2px;border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h2 class="gold-title">Lokasi Acara</h2>
+            <div class="maps-flex-container">
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="info-box">
+                    <p class="address-text">
+                        <strong>Kediaman Mempelai</strong><br>
+                        Jl. Bawang VI No.141, Cibodasari, Kota Tangerang.
+                    </p>
+                    <a href="https://maps.app.goo.gl/VqaHXC2WckigpisX6" class="btn-location-small">Buka Google Maps</a>
+                </div>
             </div>
-            <a href="https://maps.app.goo.gl/VqaHXC2WckigpisX6" class="btn-location">Petunjuk Lokasi Acara</a>
         </section>
 
-        <!-- Section 5: Gallery -->
-        <section class="gallery-grid">
-            <h2 class="gold-title">Our Gallery</h2>
-            <img src="asetclient/gallery1.jpg" data-aos="fade-right">
-            <img src="asetclient/gallery2.jpg" data-aos="fade-left">
-            <img src="asetclient/gallery3.jpg" data-aos="fade-right">
-            <img src="asetclient/gallery4.jpg" data-aos="fade-left">
-            <img src="asetclient/gallery5.jpg" data-aos="fade-right">
-        </section>
-
-        <!-- Section 6: Invitation Names -->
         <section class="invitation-names" data-aos="fade-up">
             <p>Kami yang berbahagia turut mengundang:</p>
             <ul class="family-list" style="list-style: none;">
@@ -92,7 +107,6 @@
             </ul>
         </section>
 
-        <!-- Section 7: Gift -->
         <section class="gift-section" data-aos="zoom-in">
             <div class="gift-card">
                 <p style="margin-bottom: 15px; font-weight: bold; color: #d4af37;">Tanda Kasih Sayang</p>
@@ -116,6 +130,15 @@
             </div>
         </section>
 
+        <section class="gallery-grid">
+            <h2 class="gold-title">Our Gallery</h2>
+            <img src="asetclient/gallery1.jpg" data-aos="fade-right">
+            <img src="asetclient/gallery2.jpg" data-aos="fade-left">
+            <img src="asetclient/gallery3.jpg" data-aos="fade-right">
+            <img src="asetclient/gallery4.jpg" data-aos="fade-left">
+            <img src="asetclient/gallery5.jpg" data-aos="fade-right">
+        </section>
+
         <section class="closing-section" data-aos="fade-up">
             <p>Atas kehadiran dan doa restunya kami ucapkan banyak terima kasih.</p>
             <p class="closing-salam">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
@@ -131,7 +154,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         window.addEventListener('load', () => {
@@ -144,16 +166,31 @@
 });
         AOS.init({ duration: 1000 });
 
-        // Countdown Script
-        const targetDate = new Date("April,27 2026 08:00:00").getTime();
+        const targetDate = new Date("May ,10 2026 08:00:00").getTime();
         setInterval(() => {
-            const now = new Date().getTime();
-            const diff = targetDate - now;
-            document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-            document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000);
-        }, 1000);
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+        document.getElementById('timer').innerHTML = "Acara Telah Dimulai";
+        return;
+    }
+
+    const msPerSecond = 1000;
+    const msPerMinute = msPerSecond * 60;
+    const msPerHour   = msPerMinute * 60;
+    const msPerDay    = msPerHour * 24;
+
+    const d = Math.floor(diff / msPerDay);
+    const h = Math.floor((diff % msPerDay) / msPerHour);
+    const m = Math.floor((diff % msPerHour) / msPerMinute);
+    const s = Math.floor((diff % msPerMinute) / msPerSecond);
+
+    document.getElementById('days').innerText    = d.toString().padStart(2, '0');
+    document.getElementById('hours').innerText   = h.toString().padStart(2, '0');
+    document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
+    document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+    }, 1000);
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -172,6 +209,21 @@
                 prevEl: '.swiper-button-prev',
             },
         });
+    </script>
+    <script>
+        document.querySelectorAll('.nav-item').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetSelector = this.getAttribute('href');
+        const targetElement = document.querySelector(targetSelector);
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
     </script>
 </body>
 </html>
